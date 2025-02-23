@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour
 {
-    
+    public LogicScript logicScript;
     public Rigidbody2D myRigidBody;
     public float jumpForce = 5f;
     public float gravityScale = 1.5f;
@@ -13,6 +13,7 @@ public class BirdMovement : MonoBehaviour
     void Start()
     {
         myRigidBody.gravityScale = gravityScale;
+        logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }   
 
     // Update is called once per frame
@@ -20,5 +21,10 @@ public class BirdMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         myRigidBody.velocity = Vector2.up * jumpForce;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        logicScript.gameOver();
     }
 }
