@@ -15,13 +15,15 @@ public class BirdMovement : MonoBehaviour
     {
         myRigidBody.gravityScale = gravityScale;
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-    }   
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isBirdAlive)
-        myRigidBody.velocity = Vector2.up * jumpForce;
+        {
+            myRigidBody.velocity = Vector2.up * jumpForce;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

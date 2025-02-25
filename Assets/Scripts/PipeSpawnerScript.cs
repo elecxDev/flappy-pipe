@@ -9,23 +9,28 @@ public class PipeSpawnerScript : MonoBehaviour
     public float spawnRate = 2;
     public float heightOffset = 12.5f;
     private float timer=0;
+    public LogicScript logicScript;
     // Start is called before the first frame update
     void Start()
     {
+        logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         createPipe();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawnRate)
+        if (!logicScript.isGameOver)
         {
-            timer = timer + Time.deltaTime;
-        }
-        else
-        {
-            createPipe();
-            timer = 0;
+            if (timer < spawnRate)
+            {
+                timer += Time.deltaTime;
+            }
+            else
+            {
+                createPipe();
+                timer = 0;
+            }
         }
     }
 
