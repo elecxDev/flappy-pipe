@@ -139,7 +139,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4940044240530658895}
-  - component: {fileID: 5920876191273199637}
   - component: {fileID: 1260107494624731980}
   m_Layer: 0
   m_Name: Middle
@@ -163,19 +162,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1683891176363834920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5920876191273199637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4529981006759620539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3bc428903d8ecf48b5fa56038233e23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logicScript: {fileID: 0}
 --- !u!61 &1260107494624731980
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -230,7 +216,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1683891176363834920}
-  - component: {fileID: 1522886263998975166}
   m_Layer: 0
   m_Name: Pipes 1
   m_TagString: Untagged
@@ -256,20 +241,6 @@ Transform:
   - {fileID: 4940044240530658895}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1522886263998975166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6068001505038890059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a657ddb07cafc4b90247ecace5787d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  deadZone: -55
 --- !u!1 &7661170287278192469
 GameObject:
   m_ObjectHideFlags: 0

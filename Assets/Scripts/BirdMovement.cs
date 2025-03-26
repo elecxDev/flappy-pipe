@@ -4,31 +4,33 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour
 {
+    public PipeMovement pipeScript;
+    public float moveSpeed = 1f;
+    public float deadZone = +45;
     public LogicScript logicScript;
-    public Rigidbody2D myRigidBody;
-    public float jumpForce = 5f;
-    public float gravityScale = 1.5f;
-    public bool isBirdAlive = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        myRigidBody.gravityScale = gravityScale;
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isBirdAlive)
+        if (!logicScript.isGameOver)
         {
-            myRigidBody.velocity = Vector2.up * jumpForce;
+            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+        }
+
+        if (transform.position.x >= deadZone)
+        {
+            Bird();
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void destroyBird()
     {
-        logicScript.gameOver();
-        isBirdAlive = false;
+        Destroy(gameObject);
     }
 }

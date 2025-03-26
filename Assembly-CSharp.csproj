@@ -61,9 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BirdMovement.cs" />
+    <Compile Include="Assets\Scripts\BirdSpawnerScript.cs" />
     <Compile Include="Assets\Scripts\LogicScript.cs" />
     <Compile Include="Assets\Scripts\PipeMiddleScript.cs" />
-    <Compile Include="Assets\Scripts\PipeSpawnerScript.cs" />
     <Compile Include="Assets\Scripts\PipeMovement.cs" />
   </ItemGroup>
   <ItemGroup>

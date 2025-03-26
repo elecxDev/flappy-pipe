@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class PipeSpawnerScript : MonoBehaviour
+public class BirdSpawnerScript : MonoBehaviour
 {
     public GameObject pipe;
     public float spawnRate = 2;
