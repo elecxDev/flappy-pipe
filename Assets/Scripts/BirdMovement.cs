@@ -13,6 +13,7 @@ public class BirdMovement : MonoBehaviour
     void Start()
     {
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        pipeScript = GameObject.FindGameObjectWithTag("Pipe").GetComponent<PipeMovement>();
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class BirdMovement : MonoBehaviour
 
         if (transform.position.x >= deadZone)
         {
-            Bird();
+            destroyBird();
         }
     }
 
