@@ -6,14 +6,14 @@ public class PipeMovement : MonoBehaviour
 {
     public LogicScript logicScript;
     public Rigidbody2D myRigidBody;
-    public float jumpForce = 5f;
-    public float gravityScale = 1.5f;
+    private float jumpForce = 20f;
+    private float gravityScale = 4.9f;
     public bool isBirdAlive = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        myRigidBody.gravityScale = gravityScale;
+        myRigidBody.gravityScale = 0;
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
@@ -23,12 +23,19 @@ public class PipeMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isBirdAlive)
         {
             myRigidBody.velocity = Vector2.up * jumpForce;
+            myRigidBody.gravityScale = gravityScale;
+        }
+        if (myRigidBody.velocity.y < -40f)
+        {
+            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x,-40f);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         logicScript.gameOver();
+        myRigidBody.gravityScale = 0;
+        myRigidBody.velocity = Vector2.zero;
         isBirdAlive = false;
     }
 }

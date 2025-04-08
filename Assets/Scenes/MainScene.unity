@@ -1201,7 +1201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1683891176363834920, guid: e538d0b1a55d3aa458cd152c7ac99eee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45954943
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1683891176363834920, guid: e538d0b1a55d3aa458cd152c7ac99eee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1249,7 +1249,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6068001505038890059, guid: e538d0b1a55d3aa458cd152c7ac99eee, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1439866751}
+      addedObject: {fileID: 1439866758}
     - targetCorrespondingSourceObject: {fileID: 6068001505038890059, guid: e538d0b1a55d3aa458cd152c7ac99eee, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1439866756}
@@ -1267,23 +1267,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4529981006759620539, guid: e538d0b1a55d3aa458cd152c7ac99eee, type: 3}
   m_PrefabInstance: {fileID: 1439866748}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1439866751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439866749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc25f34399c86854f80d87374199ffd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logicScript: {fileID: 2126787639}
-  myRigidBody: {fileID: 1439866756}
-  jumpForce: 5
-  gravityScale: 1.5
-  isBirdAlive: 1
 --- !u!114 &1439866752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1312,7 +1295,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1323,7 +1306,24 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 5
+--- !u!114 &1439866758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439866749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc25f34399c86854f80d87374199ffd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logicScript: {fileID: 2126787639}
+  myRigidBody: {fileID: 1439866756}
+  jumpForce: 15
+  gravityScale: 9.8
+  isBirdAlive: 1
 --- !u!1 &1456200440
 GameObject:
   m_ObjectHideFlags: 0
