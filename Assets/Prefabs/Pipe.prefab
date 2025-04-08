@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.003799975, y: 0.013449907}
+  m_Offset: {x: 0.003799975, y: -0.02690017}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6385999, y: 3.1408992}
+  m_Size: {x: 0.6386001, y: 3.221599}
   m_EdgeRadius: 0
 --- !u!1 &6621826207041184124
 GameObject:
@@ -180,8 +180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logicScript: {fileID: 0}
   myRigidBody: {fileID: 4647778941672171914}
-  jumpForce: 15
-  gravityScale: 9.8
   isBirdAlive: 1
 --- !u!50 &4647778941672171914
 Rigidbody2D:

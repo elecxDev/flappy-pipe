@@ -63,8 +63,10 @@
     <Compile Include="Assets\Scripts\BirdMovement.cs" />
     <Compile Include="Assets\Scripts\BirdSpawnerScript.cs" />
     <Compile Include="Assets\Scripts\LogicScript.cs" />
+    <Compile Include="Assets\Scripts\CloudParallax.cs" />
     <Compile Include="Assets\Scripts\PipeMiddleScript.cs" />
     <Compile Include="Assets\Scripts\PipeMovement.cs" />
+    <Compile Include="Assets\Scripts\CloudSpawnerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
