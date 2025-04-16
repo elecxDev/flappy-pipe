@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4946226270851694132}
   - component: {fileID: 6589975188030085985}
-  - component: {fileID: 5898426764274175925}
+  - component: {fileID: 1902904819560593966}
   m_Layer: 0
   m_Name: Pipe down
   m_TagString: Untagged
@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 1063744673077528229}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: -21, z: 0}
-  m_LocalScale: {x: 10, y: -10, z: 10}
+  m_LocalPosition: {x: 0, y: -32.5, z: 0}
+  m_LocalScale: {x: 1, y: -1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8098046602772618982}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70a7cd9f37e07274582537566eb2bb78, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 992da7410a3d22447b69697f6d281b42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5898426764274175925
+--- !u!61 &1902904819560593966
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,18 +117,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.003799975, y: -0.02690017}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 3, y: 3, z: 3, w: 3}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9, y: 3.2}
+    oldSize: {x: 16, y: 61}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6386001, y: 3.221599}
+  m_Size: {x: 10, y: 55}
   m_EdgeRadius: 0
 --- !u!1 &6621826207041184124
 GameObject:
@@ -236,7 +236,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8098046602772618982}
@@ -309,7 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124406318749005351}
   - component: {fileID: 9042024758372284119}
-  - component: {fileID: 2536009776963573051}
+  - component: {fileID: 7662457920074158267}
   m_Layer: 0
   m_Name: Pipe up
   m_TagString: Untagged
@@ -326,9 +326,9 @@ Transform:
   m_GameObject: {fileID: 7960952627035507230}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 21, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 32.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8098046602772618982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
@@ -373,7 +373,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70a7cd9f37e07274582537566eb2bb78, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 992da7410a3d22447b69697f6d281b42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -384,7 +384,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2536009776963573051
+--- !u!61 &7662457920074158267
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,16 +416,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.003799975, y: -0.026900172}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 3, y: 3, z: 3, w: 3}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9, y: 3.2}
+    oldSize: {x: 16, y: 61}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6386001, y: 3.2215989}
+  m_Size: {x: 10, y: 55}
   m_EdgeRadius: 0

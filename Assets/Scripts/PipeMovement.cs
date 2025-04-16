@@ -31,7 +31,7 @@ public class PipeMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) // 2D Collider, no trigger
     {
         logicScript.gameOver();
         myRigidBody.gravityScale = 0;
