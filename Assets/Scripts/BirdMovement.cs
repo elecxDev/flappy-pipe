@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour
 {
-    public PipeMovement pipeScript;
     public float moveSpeed = 1f;
+    public float flapAmplitude = 10f; // how high it bobs
+    public float flapFrequency = 2f; // how fast it bobs
     public float deadZone = +45;
     public LogicScript logicScript;
 
-    // Start is called before the first frame update
+    private float startY;
+    private float timeAlive;
+
     void Start()
     {
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        pipeScript = GameObject.FindGameObjectWithTag("Pipe").GetComponent<PipeMovement>();
+        startY = transform.position.y;
+        timeAlive = 0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!logicScript.isGameOver)
         {
+            // Move right
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+
+            // Flap (bobbing motion)
+            timeAlive += Time.deltaTime;
+            float newY = startY + Mathf.Sin(timeAlive * flapFrequency) * flapAmplitude;
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         }
 
         if (transform.position.x >= deadZone)
