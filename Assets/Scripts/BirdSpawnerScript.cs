@@ -7,7 +7,7 @@ public class BirdSpawnerScript : MonoBehaviour
 {
     public GameObject pipe;
     public float spawnRate = 2;
-    public float heightOffset = 12.5f;
+    public float heightOffset = 8.5f;
     private float timer=0;
     public LogicScript logicScript;
     // Start is called before the first frame update
