@@ -6,6 +6,14 @@ using UnityEngine;
 public class PipeMiddleScript : MonoBehaviour
 {
     public LogicScript logicScript;
+    private AudioManager audioManager;
+    public AudioClip scoreUp;
+
+    private void Awake()
+    {
+        // Find the AudioManager in the scene
+        audioManager = FindObjectOfType<AudioManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +31,7 @@ public class PipeMiddleScript : MonoBehaviour
         int scoreToAdd = 1;
         if (collision.gameObject.layer == 3)
         {
+            audioManager.PlaySFX(scoreUp);
             logicScript.addScore(scoreToAdd);
         }
     }

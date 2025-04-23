@@ -9,6 +9,18 @@ public class PipeMovement : MonoBehaviour
     private float jumpForce = 20f;
     private float gravityScale = 4.9f;
     public bool isBirdAlive = true;
+    public Sprite birdDead;
+
+    private AudioManager audioManager;
+    public AudioClip jumpSFX;
+    public AudioClip deathSFX;
+
+
+    private void Awake()
+    {
+        // Find the AudioManager in the scene
+        audioManager = FindObjectOfType<AudioManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +36,7 @@ public class PipeMovement : MonoBehaviour
         {
             myRigidBody.velocity = Vector2.up * jumpForce;
             myRigidBody.gravityScale = gravityScale;
+            audioManager.PlaySFX(jumpSFX);
         }
         if (myRigidBody.velocity.y < -40f)
         {
@@ -33,9 +46,34 @@ public class PipeMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) // 2D Collider, no trigger
     {
+        BirdDeath(collision);
+        audioManager.PlaySFX(deathSFX);
         logicScript.gameOver();
         myRigidBody.gravityScale = 0;
         myRigidBody.velocity = Vector2.zero;
         isBirdAlive = false;
+    }
+
+    private void BirdDeath(Collision2D collision)
+    {
+        GameObject bird = collision.gameObject;
+        Animator birdAnimator = bird.GetComponent<Animator>();
+        if (birdAnimator != null)
+        {
+            birdAnimator.enabled = false;
+        }
+
+        SpriteRenderer birdSpriteRenderer = bird.GetComponent<SpriteRenderer>();
+        if (birdSpriteRenderer != null)
+        {
+            birdSpriteRenderer.sprite = birdDead;
+        }
+
+        Rigidbody2D birdRigidBody = bird.GetComponent<Rigidbody2D>();
+        if (birdRigidBody != null)
+        {
+            birdRigidBody.constraints = RigidbodyConstraints2D.None;
+            birdRigidBody.gravityScale = gravityScale;
+        }
     }
 }

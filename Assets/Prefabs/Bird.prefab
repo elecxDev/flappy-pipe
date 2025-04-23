@@ -162,8 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a657ddb07cafc4b90247ecace5787d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeScript: {fileID: 0}
   moveSpeed: 15
+  flapAmplitude: 2
+  flapFrequency: 2
   deadZone: 45
   logicScript: {fileID: 0}
 --- !u!95 &8324199867136926285
