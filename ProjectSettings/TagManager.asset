@@ -12,6 +12,7 @@ TagManager:
   - c3
   - c4
   - c5
+  - Boundary
   layers:
   - Default
   - TransparentFX

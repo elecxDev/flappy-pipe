@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BirdSpawnerScript : MonoBehaviour
 {
-    public GameObject pipe;
+    public GameObject bird;
     public float spawnRate = 2;
     public float heightOffset = 8.5f;
     private float timer=0;
@@ -14,7 +14,7 @@ public class BirdSpawnerScript : MonoBehaviour
     void Start()
     {
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        createPipe();
+        createBird();
     }
 
     // Update is called once per frame
@@ -28,17 +28,17 @@ public class BirdSpawnerScript : MonoBehaviour
             }
             else
             { 
-                createPipe();
+                createBird();
                 timer = 0;
             }
         }
     }
 
-    void createPipe()
+    void createBird()
     {
         float highestPoint = transform.position.y + heightOffset;
         float lowestPoint = transform.position.y - heightOffset;
 
-        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
+        Instantiate(bird, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
     }
 }
