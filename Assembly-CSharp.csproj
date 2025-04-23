@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\CloudParallax.cs" />
     <Compile Include="Assets\Scripts\PipeMiddleScript.cs" />
     <Compile Include="Assets\Scripts\PipeMovement.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CloudSpawnerScript.cs" />
   </ItemGroup>
   <ItemGroup>
