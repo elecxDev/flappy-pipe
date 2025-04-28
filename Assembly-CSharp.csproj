@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\BirdMovement.cs" />
     <Compile Include="Assets\Scripts\BirdSpawnerScript.cs" />
     <Compile Include="Assets\Scripts\LogicScript.cs" />
+    <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\CloudParallax.cs" />
     <Compile Include="Assets\Scripts\PipeMiddleScript.cs" />
     <Compile Include="Assets\Scripts\PipeMovement.cs" />
