@@ -10,7 +10,7 @@ public class PipeMovement : MonoBehaviour
     private float gravityScale = 4.9f;
     public bool isBirdAlive = true;
     public Sprite birdDead;
-    public float recoilForce = 50f;
+    public float recoilForce = 20f;
 
     private AudioManager audioManager;
     public AudioClip jumpSFX;
@@ -50,7 +50,7 @@ public class PipeMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Boundary"))
         {
             Debug.Log("Hit with the boundary");
-            myRigidBody.AddForce(new Vector2(0, Mathf.Sign(myRigidBody.velocity.y) * recoilForce), ForceMode2D.Impulse);
+            myRigidBody.AddForce(new Vector2(0, -1 * Mathf.Sign(myRigidBody.velocity.y) * recoilForce), ForceMode2D.Impulse);
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bird"))
         {

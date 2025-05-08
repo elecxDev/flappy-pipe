@@ -5,10 +5,8 @@ using UnityEngine.UIElements;
 
 public class MenuManager : MonoBehaviour
 {
-    //public IPanel GameMenuPanel;
     public GameObject GameMenuPanel;
     public GameObject AudioSourceParent;
-    //void 
 
     private void Start()
     {
