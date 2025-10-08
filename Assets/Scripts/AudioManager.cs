@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicSource;
     public List<AudioSource> sfxSources = new List<AudioSource>();
 
-    private Coroutine fadeCoroutine;
+    // private Coroutine fadeCoroutine;
 
     private void Awake()
     {
