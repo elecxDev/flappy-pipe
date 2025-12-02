@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource musicSource;
+    // public AudioSource musicSource;
     public List<AudioSource> sfxSources = new List<AudioSource>();
 
     private Coroutine fadeCoroutine;
